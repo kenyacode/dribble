@@ -42,22 +42,4 @@ Rails.application.configure do
 	# Devise
 	config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-	# Sets Paperclip to upload images to Amazon S3
-	Paperclip.options[:command_path] = "/usr/local/bin/"
-	config.paperclip_defaults = {
-		storage: :fog,
-		fog_credentials: {
-			provider: "Local",
-			local_root: "#{Rails.root}/public"},
-			fog_directory: "",
-			fog_host: "localhost"}
-
-	# config.paperclip_defaults = {
-	# 	:storage => :s3,
-	# 	:s3_credentials => {
-	# 		:bucket => ENV['S3_BUCKET_NAME'],
-	# 		:access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-	# 		:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-	# 	}
-	# }
 end

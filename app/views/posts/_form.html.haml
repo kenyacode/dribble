@@ -1,7 +1,9 @@
-= simple_form_for @post do |f|
+= simple_form_for @post, html: { multipart: true } do |f|
 
 	.form-group
-		= f.input :image
+		= image_tag(@post.image_url(:small)) if @post.image?
+		= f.file_field :image, multiple: false
+		= f.hidden_field :image_cache
 	.form-group
 		= f.input :title
 	.form-group
