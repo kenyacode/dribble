@@ -15,7 +15,8 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.2.0.2'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk', '~> 1.6'
+gem 'fog', '~> 1.38'
 
 group :development do
 	gem 'byebug'
